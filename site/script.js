@@ -51,20 +51,17 @@
     if (hasLink) { slide.href = a.link; slide.target = '_blank'; slide.rel = 'noopener'; }
 
     if (a.image) {
+      // Görsel kırpılmadan tam gösterilir; metin görselin altında yer alır
       const img = el('img', { class: 'slide-img', src: a.image, alt: a.alt || a.title, width: 1600, height: 640 });
       if (i > 0) img.loading = 'lazy';
       slide.appendChild(img);
-    } else {
-      slide.appendChild(el('div', { class: 'slide-text' }, [
-        a.tag ? el('span', { class: 'tag', text: a.tag }) : null,
-        el('h3', { text: a.title }),
-        a.text ? el('p', { text: a.text }) : null,
-        hasLink ? el('span', { class: 'cta' }, [document.createTextNode(a.linkText || 'Detaylar'), icon('arrow')]) : null
-      ]));
     }
-    if (a.image && hasLink) {
-      slide.appendChild(el('span', { class: 'cta' }, [document.createTextNode(a.linkText || 'Detaylar'), icon('arrow')]));
-    }
+    slide.appendChild(el('div', { class: 'slide-text' }, [
+      a.tag ? el('span', { class: 'tag', text: a.tag }) : null,
+      el('h3', { text: a.title }),
+      a.text ? el('p', { text: a.text }) : null,
+      hasLink ? el('span', { class: 'cta' }, [document.createTextNode(a.linkText || 'Detaylar'), icon('arrow')]) : null
+    ]));
     track.appendChild(slide);
   });
 
