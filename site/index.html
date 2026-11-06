@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ESOGÜ E-Spor Kulübü</title>
+  <meta name="description"
+    content="Eskişehir Osmangazi Üniversitesi E-Spor Kulübü resmi sayfası. Turnuvalar ve topluluk etkinlikleri.">
+  <meta property="og:title" content="ESOGÜ E-Spor Kulübü">
+  <meta property="og:description" content="Eskişehir Osmangazi Üniversitesi E-Spor Kulübü resmi sayfası.">
+  <meta property="og:image" content="img/logo.png">
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="nav">
+    <a href="#top" class="brand"><img src="img/logo.png" alt="ESOGÜ E-Spor logosu"><span>ESOGÜ E-Spor</span></a>
+    <button class="menu-btn" aria-label="Menü" aria-expanded="false">☰</button>
+    <nav>
+      <a href="#duyurular">Duyurular</a>
+      <a href="#hakkimizda">Hakkımızda</a>
+      <a href="#katil">Katıl</a>
+      <a href="#sponsor">Sponsorlar</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <img class="hero-logo" src="img/logo.png" alt="ESOGÜ E-Spor">
+      <h1>ESOGÜ <span>E-Spor</span> Kulübü</h1>
+      <p>Oyun tutkusunu topluluğa, topluluğu başarıya dönüştürüyoruz.</p>
+      <div class="actions">
+        <a class="btn primary" href="#katil">Aramıza Katıl</a>
+        <a class="btn ghost" href="#sponsor">İş Birliği Yap</a>
+      </div>
+    </section>
+
+    <!-- Duyurular: her <article class="slide"> bir slayt. Görsel eklemek için style="--img:url('img/duyuru1.jpg')" ekleyin. -->
+    <section id="duyurular" class="section">
+      <h2>Duyurular</h2>
+      <div class="slider" aria-roledescription="carousel">
+        <div class="slides">
+          <article class="slide">
+            <div class="slide-text">
+              <span class="tag">Yeni</span>
+              <h3>Kulübümüz kuruldu!</h3>
+              <p>ESOGÜ E-Spor Kulübü olarak yola çıktık. Gelişmeler için bizi takip edin.</p>
+            </div>
+          </article>
+          <article class="slide">
+            <div class="slide-text">
+              <span class="tag">Yakında</span>
+              <h3>Üye kayıtları açılıyor</h3>
+              <p>Kayıt formu ve Discord sunucumuz çok yakında burada olacak.</p>
+            </div>
+          </article>
+          <article class="slide">
+            <div class="slide-text">
+              <span class="tag">Planlanan</span>
+              <h3>İlk turnuva hazırlıkları</h3>
+              <p>Kampüs içi ilk turnuvamız için çalışıyoruz. Detaylar duyurulacak.</p>
+            </div>
+          </article>
+        </div>
+        <button class="arrow prev" aria-label="Önceki">‹</button>
+        <button class="arrow next" aria-label="Sonraki">›</button>
+        <div class="dots"></div>
+      </div>
+    </section>
+
+    <section id="hakkimizda" class="section">
+      <h2>Hakkımızda</h2>
+      <div class="about">
+        <p>Eskişehir Osmangazi Üniversitesi öğrencilerinin oluşturduğu ESOGÜ E-Spor Kulübü; oyun ve e-spor ile ilgilenen
+          öğrencileri bir araya getirmeyi, rekabetçi ve kapsayıcı bir topluluk kurmayı amaçlar.</p>
+        <ul class="cards">
+          <li>
+            <h3>Turnuvalar</h3>
+            <p>Kampüs içi ve üniversiteler arası turnuvalar düzenlemeyi planlıyoruz.</p>
+          </li>
+          <li>
+            <h3>Topluluk</h3>
+            <p>Oyun geceleri ve buluşmalarla öğrencileri bir araya getiriyoruz.</p>
+          </li>
+          <li>
+            <h3>Gelişim</h3>
+            <p>Antrenman ve eğitim içerikleriyle oyuncuların gelişmesini destekliyoruz.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="katil" class="section join">
+      <h2>Aramıza Katıl</h2>
+      <p>Üye olmak için Discord sunucumuza katıl ya da kayıt formunu doldur.</p>
+      <div class="actions">
+        <!-- TODO: gerçek bağlantıları yazın -->
+        <a class="btn primary" href="https://discord.gg/J4FfApZ74g" target="_blank" rel="noopener">Discord'a Katıl</a>
+        <a class="btn ghost" href="https://forms.gle/2fVHPdiinXh5jq6TA" target="_blank" rel="noopener">Kayıt Formu</a>
+      </div>
+    </section>
+
+    <section id="sponsor" class="section">
+      <h2>Sponsorlar ve İş Birliği</h2>
+      <p class="lead">Genç, dinamik ve oyuna tutkulu bir öğrenci topluluğuyla markanızı buluşturmak ister misiniz?
+        Etkinlik ve turnuvalarımız için iş birliklerine açığız.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:espor.esogu@gmail.com">Bize Ulaşın</a>
+      </div>
+    </section>
+
+    <section id="iletisim" class="section">
+      <h2>İletişim</h2>
+      <ul class="contact">
+        <!-- TODO: gerçek bağlantıları yazın -->
+        <li><a href="mailto:espor.esogu@gmail.com">E-posta</a></li>
+        <li><a href="https://www.instagram.com/esogu_espor/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://discord.gg/J4FfApZ74g" target="_blank" rel="noopener">Sesli İletişim Kanalımız</a></li>
+        <li><a href="https://www.linkedin.com/company/esoguespor/posts" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> ESOGÜ E-Spor Kulübü</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

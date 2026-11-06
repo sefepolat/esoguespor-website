@@ -1,0 +1,6 @@
+# Varsayılan olarak her şeyi yoksay, sadece aşağıdakileri dahil et
+*
+!.gitignore
+!netlify.toml
+!site/
+!site/**
