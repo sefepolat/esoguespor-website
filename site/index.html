@@ -4,33 +4,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ESOGÜ E-Spor Kulübü</title>
+  <title>ESOGÜ E-Spor Kulübü | Eskişehir Osmangazi Üniversitesi</title>
   <meta name="description"
-    content="Eskişehir Osmangazi Üniversitesi E-Spor Kulübü resmi sayfası. Turnuvalar ve topluluk etkinlikleri.">
+    content="Eskişehir Osmangazi Üniversitesi E-Spor Kulübü resmi sayfası. League of Legends ve VALORANT odaklı turnuvalar, topluluk etkinlikleri ve duyurular.">
+  <meta name="theme-color" content="#0b1033">
+
+  <!-- TODO: Sitenin gerçek adresi farklıysa aşağıdaki, robots.txt ve sitemap.xml içindeki adresi değiştirin -->
+  <link rel="canonical" href="https://esogu-espor.netlify.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:site_name" content="ESOGÜ E-Spor Kulübü">
   <meta property="og:title" content="ESOGÜ E-Spor Kulübü">
   <meta property="og:description" content="Eskişehir Osmangazi Üniversitesi E-Spor Kulübü resmi sayfası.">
-  <meta property="og:image" content="img/logo.png">
-  <link rel="icon" href="favicon.png">
+  <meta property="og:url" content="https://esogu-espor.netlify.app/">
+  <meta property="og:image" content="https://esogu-espor.netlify.app/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ESOGÜ E-Spor Kulübü",
+    "url": "https://esogu-espor.netlify.app/",
+    "logo": "https://esogu-espor.netlify.app/img/logo-400.png",
+    "email": "espor.esogu@gmail.com",
+    "parentOrganization": { "@type": "CollegeOrUniversity", "name": "Eskişehir Osmangazi Üniversitesi" },
+    "sameAs": [
+      "https://www.instagram.com/esogu_espor/",
+      "https://www.linkedin.com/company/esoguespor/",
+      "https://discord.gg/J4FfApZ74g"
+    ]
+  }
+  </script>
 </head>
 
 <body>
 
+  <!-- SVG ikon seti (Lucide, ISC lisansı) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></symbol>
+      <symbol id="i-discord" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+      <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+      <symbol id="i-trending" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#icerik">Ana içeriğe geç</a>
+
   <header class="nav">
-    <a href="#top" class="brand"><img src="img/logo.png" alt="ESOGÜ E-Spor logosu"><span>ESOGÜ E-Spor</span></a>
-    <button class="menu-btn" aria-label="Menü" aria-expanded="false">☰</button>
-    <nav>
+    <a href="#top" class="brand">
+      <img src="img/logo-96.png" width="44" height="42" alt="">
+      <span>ESOGÜ E-Spor</span>
+    </a>
+    <button class="menu-btn" aria-label="Menüyü aç" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+    <nav id="menu">
       <a href="#duyurular">Duyurular</a>
       <a href="#hakkimizda">Hakkımızda</a>
-      <a href="#katil">Katıl</a>
+      <a href="#oyunlar">Oyunlar</a>
+      <a href="#etkinlikler" id="nav-events" hidden>Etkinlikler</a>
       <a href="#sponsor">Sponsorlar</a>
       <a href="#iletisim">İletişim</a>
+      <a href="#katil" class="nav-cta">Katıl</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero">
-      <img class="hero-logo" src="img/logo.png" alt="ESOGÜ E-Spor">
+      <img class="hero-logo" src="img/logo-400.png" width="240" height="230" alt="ESOGÜ E-Spor Kulübü logosu"
+        fetchpriority="high">
       <h1>ESOGÜ <span>E-Spor</span> Kulübü</h1>
       <p>Oyun tutkusunu topluluğa, topluluğu başarıya dönüştürüyoruz.</p>
       <div class="actions">
@@ -39,56 +99,42 @@
       </div>
     </section>
 
-    <!-- Duyurular: her <article class="slide"> bir slayt. Görsel eklemek için style="--img:url('img/duyuru1.jpg')" ekleyin. -->
-    <section id="duyurular" class="section">
+    <div id="icerik"></div>
+
+    <!-- Duyurular site/data.js içindeki ANNOUNCEMENTS listesinden gelir -->
+    <section id="duyurular" class="section reveal">
       <h2>Duyurular</h2>
-      <div class="slider" aria-roledescription="carousel">
-        <div class="slides">
-          <article class="slide" style="--img:url('img/genelduyuru.png')">
-            <div class="slide-text">
-              <span class="tag">Yeni</span>
-              <h3>Kulübümüz kuruldu!</h3>
-              <p>ESOGÜ E-Spor Kulübü olarak yola çıktık. Gelişmeler için bizi takip edin.</p>
-            </div>
-          </article>
-          <a class="slide clickable" style="--img:url('img/kayit.png')" href="https://forms.gle/2fVHPdiinXh5jq6TA"
-            target="_blank" rel="noopener">
-            <div class="slide-text">
-              <span class="tag">Kayıtlar Açık</span>
-              <h3>Üye kayıtları açılıyor</h3>
-              <p>Aramıza katılmak için kayıt formunu doldur.</p>
-              <span class="cta">Forma git →</span>
-            </div>
-          </a>
-          <article class="slide" style="--img:url('img/genelduyuru.png')">
-            <div class="slide-text">
-              <span class="tag">Planlanan</span>
-              <h3>İlk turnuva hazırlıkları</h3>
-              <p>Kampüs içi ilk turnuvamız için çalışıyoruz. Detaylar duyurulacak.</p>
-            </div>
-          </article>
-        </div>
-        <button class="arrow prev" aria-label="Önceki">‹</button>
-        <button class="arrow next" aria-label="Sonraki">›</button>
+      <div class="slider" role="region" aria-roledescription="carousel" aria-label="Duyurular">
+        <div class="slides" aria-live="off"></div>
+        <button class="arrow prev" aria-label="Önceki duyuru">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <button class="arrow next" aria-label="Sonraki duyuru">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
         <div class="dots"></div>
       </div>
+      <noscript><p class="lead">Duyuruları görmek için JavaScript'i etkinleştirin.</p></noscript>
     </section>
 
-    <section id="hakkimizda" class="section">
+    <section id="hakkimizda" class="section reveal">
       <h2>Hakkımızda</h2>
       <div class="about">
-        <p>Eskişehir Osmangazi Üniversitesi öğrencilerinin oluşturduğu ESOGÜ E-Spor Kulübü; oyun ve e-spor ile ilgilenen
-          öğrencileri bir araya getirmeyi, rekabetçi ve kapsayıcı bir topluluk kurmayı amaçlar.</p>
+        <p>Eskişehir Osmangazi Üniversitesi öğrencilerinin oluşturduğu ESOGÜ E-Spor Kulübü; oyun ve e-spor ile
+          ilgilenen öğrencileri bir araya getirmeyi, rekabetçi ve kapsayıcı bir topluluk kurmayı amaçlar.</p>
         <ul class="cards">
           <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-trophy"/></svg>
             <h3>Turnuvalar</h3>
             <p>Kampüs içi ve üniversiteler arası turnuvalar düzenleyeceğiz.</p>
           </li>
           <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-users"/></svg>
             <h3>Topluluk</h3>
             <p>Oyun geceleri ve buluşmalarla öğrencileri bir araya getiriyoruz.</p>
           </li>
           <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-trending"/></svg>
             <h3>Gelişim</h3>
             <p>Antrenman ve eğitim içerikleriyle oyuncuların gelişmesini destekliyoruz.</p>
           </li>
@@ -96,18 +142,39 @@
       </div>
     </section>
 
-    <section id="katil" class="section join">
+    <section id="oyunlar" class="section reveal">
+      <h2>Odak Oyunlarımız</h2>
+      <ul class="games">
+        <li>
+          <span class="game-badge">LoL</span>
+          <h3>League of Legends</h3>
+          <p>Takım kurulumu, antrenman ve turnuva organizasyonlarında odak oyunlarımızdan biri.</p>
+        </li>
+        <li>
+          <span class="game-badge">VAL</span>
+          <h3>VALORANT</h3>
+          <p>Takım kurulumu, antrenman ve turnuva organizasyonlarında odak oyunlarımızdan biri.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Etkinlik yoksa bu bölüm otomatik gizlenir. Etkinlik eklemek için site/data.js içindeki EVENTS listesini doldurun. -->
+    <section id="etkinlikler" class="section reveal" hidden>
+      <h2>Etkinlikler</h2>
+      <ul class="events"></ul>
+    </section>
+
+    <section id="katil" class="section join reveal">
       <h2>Aramıza Katıl</h2>
       <p>Üye olmak için kayıt formunu doldur ya da sesli iletişim kanallarımızı kullan.</p>
       <div class="actions">
-        <!-- TODO: gerçek bağlantıları yazın -->
         <a class="btn primary" href="https://discord.gg/J4FfApZ74g" target="_blank" rel="noopener">Sesli İletişim
           Kanalımıza Katıl</a>
         <a class="btn ghost" href="https://forms.gle/2fVHPdiinXh5jq6TA" target="_blank" rel="noopener">Kayıt Formu</a>
       </div>
     </section>
 
-    <section id="sponsor" class="section">
+    <section id="sponsor" class="section reveal">
       <h2>Sponsorlar ve İş Birliği</h2>
       <p class="lead">Genç, dinamik ve oyuna tutkulu bir öğrenci topluluğuyla markanızı buluşturmak ister misiniz?
         Etkinlik ve turnuvalarımız için iş birliklerine açığız.</p>
@@ -116,14 +183,13 @@
       </div>
     </section>
 
-    <section id="iletisim" class="section">
+    <section id="iletisim" class="section reveal">
       <h2>İletişim</h2>
       <ul class="contact">
-        <!-- TODO: gerçek bağlantıları yazın -->
-        <li><a href="mailto:espor.esogu@gmail.com">E-posta</a></li>
-        <li><a href="https://www.instagram.com/esogu_espor/" target="_blank" rel="noopener">Instagram</a></li>
-        <li><a href="https://discord.gg/J4FfApZ74g" target="_blank" rel="noopener">Sesli İletişim Kanalımız</a></li>
-        <li><a href="https://www.linkedin.com/company/esoguespor/posts" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:espor.esogu@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>E-posta</a></li>
+        <li><a href="https://www.instagram.com/esogu_espor/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>Instagram</a></li>
+        <li><a href="https://discord.gg/J4FfApZ74g" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-discord"/></svg>Sesli İletişim Kanalımız</a></li>
+        <li><a href="https://www.linkedin.com/company/esoguespor/posts" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a></li>
       </ul>
     </section>
   </main>
@@ -132,6 +198,7 @@
     <p>© <span id="year"></span> ESOGÜ E-Spor Kulübü</p>
   </footer>
 
+  <script src="data.js"></script>
   <script src="script.js"></script>
 </body>
 
