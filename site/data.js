@@ -32,7 +32,7 @@ const ANNOUNCEMENTS = [
     image: "img/kayit.png",
     alt: "ESOGÜ E-Spor Kulübü aktif üye alımları başladı",
     link: "https://forms.gle/2fVHPdiinXh5jq6TA",
-    linkText: "Forma git"
+    linkText: "Forma Git"
   }
 ];
 
