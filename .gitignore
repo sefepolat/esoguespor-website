@@ -2,5 +2,7 @@
 *
 !.gitignore
 !netlify.toml
+!README.md
+!LICENSE
 !site/
 !site/**

@@ -1,113 +1,162 @@
-# ESOGÜ E-Spor Kulübü Web Sitesi
+# ESOGÜ E-Spor Kulübü — Resmi Web Sitesi
 
-Eskişehir Osmangazi Üniversitesi E-Spor Kulübü'nün resmi web sitesi. League of Legends ve VALORANT odaklı topluluğumuzun duyurularını, etkinliklerini ve iletişim kanallarını tek yerde toplar.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/deploy-status)](https://app.netlify.com/)
+[![Zero Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](https://github.com/sefepolat/esoguespor-website)
+[![Tech Stack](https://img.shields.io/badge/stack-HTML5%20%7C%20CSS3%20%7C%20Vanilla%20JS-orange)](https://github.com/sefepolat/esoguespor-website)
+[![License: MIT](https://img.shields.io/badge/License-MIT%20%2B%20Brand%20Reserved-blue.svg)](LICENSE)
 
-Site düz HTML, CSS ve JavaScript ile yazılmıştır. Derleme adımı, paket yöneticisi ya da framework gerektirmez. [Netlify](https://www.netlify.com/) üzerinde yayınlanır.
+Eskişehir Osmangazi Üniversitesi E-Spor Kulübü'nün resmi web sitesi. **League of Legends**, **VALORANT** ve **Teamfight Tactics** odaklı rekabetçi oyuncu topluluğumuzu, turnuvalarımızı, duyurularımızı ve kurumsal iş birliklerimizi tek bir modern merkezde buluşturur.
 
-## Özellikler
+Ağır framework'ler veya derleme (build) bağımlılıkları yerine; **saf HTML5, modern CSS3 ve Vanilla ES6+ JavaScript** mimarisiyle, en yüksek performans ve erişilebilirlik standartlarında geliştirilmiştir. [Netlify](https://www.netlify.com/) üzerinde statik olarak yayınlanır.
 
-- Duyuru slider'ı (görsel, bağlantı, dokunmatik kaydırma desteği)
-- Hakkımızda ve odak oyunlar bölümleri
-- Etkinlik listesi (etkinlik yoksa bölüm otomatik gizlenir)
-- Katılım, sponsor ve iletişim bölümleri
-- Mobil uyumlu tasarım, klavye ve ekran okuyucu erişilebilirliği
-- SEO: Open Graph, JSON-LD, `sitemap.xml`, `robots.txt`
-- Özel 404 sayfası, güvenlik başlıkları ve önbellekleme (`_headers`)
-- Kendi sunucusundan sunulan yazı tipleri (Inter, Space Grotesk)
+---
 
-## Proje yapısı
+## ✨ Öne Çıkan Özellikler
+
+### 🎨 Tasarım & Espor Kimliği
+- **Mimari Renk Paleti:** Resmi kulüp kimliğine dayanan Gece Laciverti (`#090c19`), Kulüp Mavisi (`#19256E`), Buz Turkuazı (`#68B6BA`) ve Enerjik Turuncu (`#F4A261`).
+- **3D Taktil Push Butonlar:** Gerçek fizik mekanizması hissi veren basılabilir katmanlı 3D şasili butonlar (`.btn-3d`).
+- **Sonsuz Parallax Izgara:** Sayfa kaydırıldıkça donanım hızlandırmalı yumuşak bir derinlik sunan ve sayfa altında asla kesilmeyen ızgara katmanı (`.bg-grid-parallax`).
+
+### 🕹️ Mikro Etkileşimler & Animasyonlar
+- **3D Hero Logo Tilt:** En üstteki kulüp logosunun imleç hareketini 3 boyutlu derinlikle takip etmesi.
+- **Manyetik Buton (Magnetic Pull):** "Aramıza Katıl" butonunun fare imlecini fiziksel olarak kendine doğru çekmesi.
+- **Ritmik Text Scramble (Şifre Çözücü):** Bölüm başlıkları ekrana girdiğinde harflerin soldan sağa dalga halinde şifreli gibi çözülerek açılması.
+- **Spotlight Kartlar:** Kart ve paneller üzerinde gezinen imleci takip eden fütüristik radyal ışık hüzmesi (Linear / Vercel tarzı).
+- **Akıcı Duyuru Slider'ı:** Dokunmatik kaydırma (touch swipe), klavye gezintisi ve otomatik geçiş destekli slider.
+
+### 🔤 Çok Katmanlı Tipografi
+Tüm yazı tipleri harici CDN gecikmelerini önlemek amacıyla yerel `.woff2` olarak sunulur:
+- **Marka & Hero Başlığı:** `Clash Display` (Cesur ve heykelsi stüdyo kimliği)
+- **Bölüm Başlıkları & 3D Butonlar:** `Syne` (Geniş açılı, fütüristik espor karakteri)
+- **Teknik HUD, Sayılar & Etiketler:** `Space Mono` (`// 01`, `Kayıtlar Açık`, tarih kutuları)
+- **Gövde & Okuma Metinleri:** `Plus Jakarta Sans` (Yüksek okunabilirlik ve modern geometrik anatomi)
+
+### 🚀 SEO, Güvenlik & Performans
+- **Sıfır Bağımlılık (Zero Dependencies):** Paket yöneticisi (`npm`/`yarn`) veya devasa `node_modules` bağımlılığı olmadan anında açılış.
+- **Sosyal Medya & SEO:** Open Graph (`og:image`, `og:title`), Twitter Card (`summary_large_image`), `sitemap.xml`, `robots.txt` ve Schema.org JSON-LD arama motoru yapısal verisi.
+- **Güvenlik Başlıkları:** `_headers` dosyasıyla CSP, HSTS, X-Frame-Options ve agresif statik önbellekleme optimizasyonu.
+- **Erişilebilirlik (a11y):** Ekran okuyucu etiketleri (`aria-*`), atlama bağlantısı (`skip to content`) ve tam klavye kontrolü.
+
+---
+
+## 📁 Proje Yapısı
 
 ```
 .
-├── netlify.toml        # Netlify ayarı (publish = "site")
-├── .gitignore          # Yalnızca site/ ve yapılandırma dosyaları repoya girer
-└── site/
-    ├── index.html      # Ana sayfa
-    ├── style.css       # Stiller
-    ├── script.js       # Slider, menü, etkinlik ve animasyon mantığı
-    ├── data.js         # Duyuru ve etkinlik içerikleri
-    ├── 404.html
-    ├── _headers        # Netlify güvenlik ve önbellek başlıkları
-    ├── robots.txt
-    ├── sitemap.xml
-    ├── fonts/          # Yazı tipi dosyaları (woff2)
-    └── img/            # Logo ve duyuru görselleri
+├── netlify.toml        # Netlify yayın yapılandırması (publish = "site")
+├── .gitignore          # Sadece site/ ve ana yapılandırma dosyalarını repoya dahil eder
+├── README.md           # Proje dokümantasyonu
+├── LICENSE             # Telif ve lisans bilgileri
+└── site/               # Canlıya çıkan üretim dizini
+    ├── index.html      # Ana sayfa (Semantik HTML5 & SEO)
+    ├── style.css       # Tasarım sistemi, CSS değişkenleri ve animasyonlar
+    ├── script.js       # Mikro etkileşimler, slider ve animasyon motoru
+    ├── data.js         # Duyurular ve etkinlik veri tabanı (JSON mantığı)
+    ├── 404.html        # Özel 404 sayfası
+    ├── _headers        # Netlify güvenlik ve önbellekleme kuralları
+    ├── robots.txt      # Arama motoru indeksleme rehberi
+    ├── sitemap.xml     # Site haritası
+    ├── fonts/          # Yerel font dosyaları (.woff2)
+    └── img/            # Logo, afiş ve optimize edilmiş oyun görselleri
 ```
 
-## Yerelde çalıştırma
+---
 
-Derleme gerekmez. `site/index.html` dosyasını tarayıcıda açmanız yeterlidir.
+## 💻 Yerelde Çalıştırma
 
-İsterseniz yerel bir sunucu da kullanabilirsiniz:
+Projede derleme adımı yoktur. Doğrudan `site/index.html` dosyasını çift tıklayarak tarayıcınızda açabilirsiniz.
+
+Yerel bir web sunucusuyla çalıştırmak isterseniz:
 
 ```bash
+# Node.js ile
 npx serve site
-# veya
+
+# veya Python 3 ile
 python -m http.server 8000 --directory site
 ```
 
-## İçerik güncelleme
+---
 
-Duyuru ve etkinlikler `site/data.js` dosyasından yönetilir. HTML'e dokunmanız gerekmez.
+## ✍️ İçerik Nasıl Güncellenir?
 
-### Duyuru eklemek
+Duyurular ve etkinlikler tek bir merkezden, `site/data.js` dosyasından yönetilir. **HTML koduna dokunmanıza gerek yoktur.**
 
-```js
+### Yeni Duyuru Eklemek (`ANNOUNCEMENTS`)
+
+`site/data.js` dosyasındaki diziye yeni bir nesne eklemeniz yeterlidir:
+
+```javascript
 {
-  tag: "Yeni",                       // küçük etiket
-  title: "Başlık",
-  text: "Kısa açıklama",
-  image: "img/duyuru.png",           // opsiyonel, önerilen boyut 1600x640 px
-  alt: "Görselin açıklaması",
-  link: "https://...",               // opsiyonel
-  linkText: "Detaylar"               // opsiyonel
+  tag: "Kayıtlar Açık",                       // Rozet etiketi
+  title: "Aktif üye alımları başladı!",       // Duyuru başlığı
+  text: "Aramıza katılmak için formu doldur.", // Açıklama metni
+  image: "img/kayit.png",                     // Önerilen boyut: 1600x640 px
+  alt: "Duyuru görseli açıklaması",
+  link: "https://forms.gle/...",              // Tıklama linki (opsiyonel)
+  linkText: "Forma Git"                       // 3D buton metni (opsiyonel)
 }
 ```
 
-Görseli `site/img/` klasörüne koyun. Dosya adında Türkçe karakter ve boşluk kullanmayın.
+> **Görsel İpucu:** Duyuru görsellerini `site/img/` klasörüne ekleyin. Dosya adlarında boşluk ve Türkçe karakter kullanmamaya özen gösterin.
 
-### Etkinlik eklemek
+### Yeni Etkinlik Eklemek (`EVENTS`)
 
-```js
+```javascript
 {
   date: "2026-12-15T19:00",
-  title: "İlk Kampüs Turnuvası",
+  title: "Kampüs İçi VALORANT Turnuvası",
   game: "VALORANT",
   place: "Online (Discord)",
-  link: "https://..."
+  link: "https://discord.gg/J4FfApZ74g"
 }
 ```
 
-`EVENTS` listesi doluysa "Etkinlikler" bölümü ve menü bağlantısı otomatik görünür.
+*Not: `EVENTS` listesinde en az bir etkinlik varsa "Etkinlikler" bölümü ve menü bağlantısı otomatik olarak görünür; liste boş olduğunda bölüm kendiliğinden gizlenir.*
 
-## Yayınlama (Netlify)
+---
 
-Repo Netlify'a GitHub üzerinden bağlıdır. `main` dalına yapılan her push siteyi otomatik günceller.
+## 🚀 Canlıya Alma (Netlify Deployment)
+
+Depo doğrudan Netlify CI/CD hattına bağlıdır. `main` dalına push edilen her commit otomatik olarak test edilir ve 30-40 saniye içinde canlıya alınır:
 
 ```bash
-git add .
-git commit -m "Değişiklik açıklaması"
-git push
+git add site/ README.md
+git commit -m "feat: yeni duyuru ve etkinlikler eklendi"
+git push origin main
 ```
 
-Netlify ayarları:
+**Netlify Dağıtım Parametreleri:**
+- **Base directory:** *(Boş)*
+- **Build command:** *(Boş)*
+- **Publish directory:** `site`
 
-| Ayar | Değer |
-|---|---|
-| Base directory | boş |
-| Build command | boş |
-| Publish directory | `site` |
+---
 
-Sitenin adresi değişirse `site/index.html` (canonical, Open Graph ve JSON-LD), `site/robots.txt` ve `site/sitemap.xml` içindeki adresi de güncelleyin.
+## 📚 Kullanılan Kaynaklar
 
-## Kullanılan kaynaklar
+- **Yazı Tipleri:**
+  - [Clash Display](https://www.fontshare.com/fonts/clash-display) (Indian Type Foundry / Fontshare)
+  - [Syne](https://fonts.google.com/specimen/Syne) (Lucas Descroix / Bonjour Monde)
+  - [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) (Tokotype)
+  - [Space Mono](https://fonts.google.com/specimen/Space+Mono) (Colophon Foundry)
+- **İkonlar:** [Lucide Icons](https://lucide.dev/) (ISC Lisansı)
+- **Oyun Markaları:** League of Legends, VALORANT ve Teamfight Tactics, Riot Games, Inc. şirketinin tescilli ticari markalarıdır.
 
-- Yazı tipleri: [Inter](https://rsms.me/inter/) ve [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) (SIL Open Font License)
-- İkonlar: [Lucide](https://lucide.dev/) (ISC lisansı)
+---
 
-## İletişim
+## 📄 Lisans & Telif Hakları
 
-- E-posta: espor.esogu@gmail.com
-- Instagram: [@esogu_espor](https://www.instagram.com/esogu_espor/)
-- LinkedIn: [ESOGÜ E-Spor](https://www.linkedin.com/company/esoguespor/)
-- Discord: [Sunucuya katıl](https://discord.gg/J4FfApZ74g)
+- **Kaynak Kodlar:** Kaynak kod altyapısı [MIT Lisansı](LICENSE) kapsamında korunmaktadır.
+- **Marka & Medya:** ESOGÜ E-Spor Kulübü logosu, üniversiteye ait isimler, görsel tasarımlar ve metin içerikleri ESOGÜ E-Spor Kulübü'ne aittir; izinsiz kopyalanamaz ve ticari amaçla kullanılamaz.
+
+---
+
+## 📬 İletişim & Topluluk
+
+- **Resmi E-Posta:** [espor.esogu@gmail.com](mailto:espor.esogu@gmail.com)
+- **Discord Sunucusu:** [discord.gg/J4FfApZ74g](https://discord.gg/J4FfApZ74g)
+- **Instagram:** [@esogu_espor](https://www.instagram.com/esogu_espor/)
+- **LinkedIn:** [ESOGÜ E-Spor Kulübü](https://www.linkedin.com/company/esoguespor/)
+- **Üniversite:** Eskişehir Osmangazi Üniversitesi (ESOGÜ), Eskişehir / Türkiye
